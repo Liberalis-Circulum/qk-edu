@@ -22,3 +22,4 @@ class Teachers(db.Model):
     subject = db.Column(db.Integer)
     # 是否删除
     is_status = db.Column(db.Integer, nullable=False)
+    classes = db.relationship('Classes', backref='teachers')

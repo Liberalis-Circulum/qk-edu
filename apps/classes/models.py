@@ -9,3 +9,5 @@ class Classes(db.Model):
     english = db.Column(db.Integer, db.ForeignKey('teachers.tid'))
     sport = db.Column(db.Integer, db.ForeignKey('teachers.tid'))
     is_status = db.Column(db.Integer, nullable=False)
+    teachers = db.relationship('Teachers', backref='classes')
+    students = db.relationship('Students', backref='classes')

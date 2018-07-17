@@ -24,3 +24,4 @@ class Students(db.Model):
     # 班级
     cls = db.Column(db.Integer, db.ForeignKey('classes.cid'))
     is_status = db.Column(db.Integer)
+    classes = db.relationship('Classes', backref='students')
